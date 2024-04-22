@@ -1,14 +1,15 @@
-import Haykuu from "./components/Haykuu"
-import Person from "./components/Person"
-import Studio from "./components/Studio"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Haykuu from "./pages/Haykuu"
 
-export default function App() {
+const router = createBrowserRouter([{
+  path: "/",
+  element: <Haykuu/>
+  }])
+
+function App() {
   return (
-    <main >
-      <Haykuu/>
-      <Person/>
-      <Studio/>
-    </main>
-   
+    <RouterProvider router={router}/>
   )
 }
+
+export default App
